@@ -1,0 +1,50 @@
+<!--Project by Ivy Sugars and Amanda Laili-->
+<html>
+        <head>
+        <link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+        <link href='style.css' rel='stylesheet' type='text/css'>
+        <link async href="http://fonts.googleapis.com/css?family=Rock%20Salt" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+        <title>Where Are You?</title>
+        </head>
+        <body>
+            <h1></h1>
+        </body>
+        
+            <main>
+                <div id="map-canvas"></div>
+            </main>
+        
+        <div id="wapiblock"></div>
+        <script type="text/javascript" src="http://www.panoramio.com/wapi/wapi.js?v=1"></script>
+
+        
+        <div id="map_canvas" style="height: 400px; width:950px"></div>
+        <!--the following script is to load google maps api asynchronously as seen at http://stackoverflow.com/questions/14229695/google-maps-api-throws-uncaught-referenceerror-google-is-not-defined-only-whe  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>
+            /*not the best thing to do (global variables); but it works*/
+            var lat,lon;
+            function getgeoip(json){
+                lat=parseFloat(json.latitude);
+                lon=parseFloat(json.longitude);
+            }
+            
+            var map;
+            function initialize() {
+                var myLoc = new google.maps.LatLng(lat,lon);
+                var mapOptions = { zoom:10, mapTypeId: google.maps.MapTypeId.TERRAIN, center: myLoc }
+                map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+                }
+        </script>
+
+        <script type="application/javascript" src="http://www.telize.com/geoip?callback=getgeoip"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src='app.js'></script>
+        
+        <footer>
+            Banner image taken from <a href="https://www.flickr.com/photos/annielehn-artphotography/4771722067/">www.flickr.com</a>
+            This service uses information from <a href="http://www.telize.com">www.telize.com</a>
+        </footer>
+        
+    </html>

@@ -1,0 +1,165 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+body{
+    
+    width: 100%;
+    height: 100%;
+    font-family: 'Handlee', cursive;
+    background-color: #CCDDEE;
+}
+
+h1{
+    border-color: #0F042E;
+    background-image:url('images.jpg');
+    padding: 6.88%;
+    color: #FFECBB;
+    }
+
+/*the following rainbow class was taken from http://enjoycss.com/start#text */
+
+.rainbow {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  border: none;
+  font: normal normal bold 50px/normal "Rock Salt", Helvetica, sans-serif;
+  font-size: 4vw;
+  color: rgba(0, 0, 0, 0);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+    /*rgb(217,31,38)(226,91,14)(2,135,206) */
+  text-shadow: 3px 0 0 #5b0f8e , 6px 0 0 rgb(4,77,145) , 9px 0 0 rgb(2,135,206) , 12px 0 0 rgba(111,168,220,1) , 15px 0 0 #09c6c6 , 18px 0 0 #1be8e8 , 21px 0 0 #2bd873 ;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.rainbow:hover {
+  text-shadow: -3px 0 0 #5b0f8e , -6px 0 0 rgb(4,77,145) , -9px 0 0 rgb(2,135,206) , -12px 0 0 rgba(111,168,220,1) , -15px 0 0 #09c6c6 , -18px 0 0 #1be8e8 , -21px 0 0 #2bd873 ;
+  -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+p{
+    float: left;
+    text-align: center;
+    margin-top: 8.5%;
+    margin-left: 13%;
+    color: #090834;
+}
+
+
+main table{
+    width: 35%;
+    height: 30%;
+    float: right;
+    margin-top: 5%;
+    margin-right: 14%;
+    margin-bottom: 5%;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 10px 10px 5px #888888;
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+}
+
+tr:nth-child(odd) {
+    color: #000000;
+    background-color: #4940BA;
+    opacity: 9%;
+}
+
+tr:nth-child(even) {
+    color: #000000;
+    background-color: #8E86DD;
+    opacity: 5%;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 58px;
+    background-color: #EAEB8B;
+    padding: 1%;
+    border: 1%;
+    font-size: 25;
+}
+
+
+#wapiblock{
+    max-width: 100%;
+    width: 75%;
+    height: auto;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+
+#map_canvas{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+    
+}
+
+@media screen and (max-width: 700px){
+    
+    h1{
+        height: 100px;
+        
+    }
+    .rainbow{
+       font-size: 4vw;
+        
+    }
+    main table{
+        font-size: 20px;
+        width: 30%;
+        height: 25%;
+    }
+    
+     #wapiblock{
+         max-width: 100%;
+         overflow: scroll;
+      
+   
+    }
+    
+    footer{
+        font-size: 20px;
+        
+        
+    }
+    
+    
+    
+}
+    
+
+@media screen and (max-width: 400px){
+    .rainbow{
+        float: center;
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 200px){
+    .rainbow{
+        text-align: center;
+        font-size: 30px;
+        float: clear;
+        
+    }
+}
